@@ -9,10 +9,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="<?= $assets ?>css/style.css">
   <link rel="stylesheet" href="<?= $assets ?>css/sanitize.css">
   <link rel="stylesheet" href="<?= $assets ?>css/forms.css">
   <link rel="stylesheet" href="<?= $assets ?>css/typography.css">
+  <link rel="stylesheet" href="<?= $assets ?>css/style.css">
 <?php foreach ($stylesheets as $stylesheet): ?>
   <link rel="stylesheet" href="<?= $assets . $stylesheet ?>">
 <?php endforeach ?>
@@ -21,6 +21,14 @@
 <body>
 
 <?= $this->section('content') ?>
+
+<footer>
+  <div>Copyright &copy;
+    <a class="footer__link" href="https://github.com/jonloureiro" target="_blank">
+      github/jonloureiro
+    </a>
+  </div>
+</footer>
 
 </body>
 </html>
