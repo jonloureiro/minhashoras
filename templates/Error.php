@@ -4,7 +4,7 @@
       'css/error.css'
     ]
 ]); ?>
-<body>
+<main>
   <div class="error-wrapper">
   <h1 class="error-wrapper__code"><?= $this->e($code) ?></h1>
   <h2 class="error-wrapper__message"><?= $this->e($message) ?></h2>
@@ -15,4 +15,4 @@
     console.error(`<?= $this->e($text) ?>`);
 <?php endif; ?>
   </script>
-</body>
+</main>
