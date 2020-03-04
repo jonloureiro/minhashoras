@@ -10,3 +10,6 @@ end_of_line = lf
 
 [*.{yml,php}]
 indent_size = 4
+
+[templates/**/*.php]
+indent_size = 2
