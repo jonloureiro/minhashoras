@@ -8,12 +8,16 @@
     const password = form[1];
     const button = form[2];
 
+    email.disabled = true;
+    password.disabled = true;
+    button.disabled = true;
     password.value = '';
     button.innerText = 'Carregando';
-    button.disabled = true;
     body.classList = 'wait';
 
     setTimeout(function () {
+      email.disabled = false;
+      password.disabled = false;
       button.disabled = false;
       button.innerText = 'Entrar';
       body.classList = '';
