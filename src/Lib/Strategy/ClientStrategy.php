@@ -34,6 +34,11 @@ class ClientStrategy extends ApplicationStrategy
     ): ResponseInterface {
         $controller = $route->getCallable($this->getContainer());
         ['templateName' => $name, 'templateData' => $data ] = $controller($request, $route->getVars());
+        $assets = getenv('ASSETS');
+        if (!$assets) {
+            $assets = '/';
+        }
+        $data['assets'] = $assets;
         $response = $this->responseFactory->createResponse();
         $response->getBody()->write($this->templates->render($name, $data));
         $response = $this->applyDefaultResponseHeaders($response);
