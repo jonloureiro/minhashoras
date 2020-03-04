@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--a2-color);
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--a3-color);
+  padding: 0 1rem 1rem;
+  border-radius: .25rem;
+  width: 18rem;
+  overflow: hidden;
+}
+
+.form-login__title {
+  background-color: var(--a6-color);
+  padding: .25rem 0;
+  margin: 0 -1rem .75rem;
+  color: var(--a4-color);
+  text-align: center;
+}
+
+.form-login__label {
+  background-color: var(--a4-color);
+  color: var(--a6-color);
+  align-self: flex-start;
+  font-weight: bold;
+  width: 4rem;
+  border-radius: .25rem .25rem;
+  padding-top: .125rem;
+  margin-bottom: -.25rem;
+  text-align: center;
+}
+
+.form-login__input {
+  background-color: var(--a4-color);
+  margin-bottom: .5rem;
+  color: var(--a6-color);
+  font-weight: 500;
+  border-radius: 0 .25rem .25rem .25rem;
+  border-width: 0;
+  outline-width: 0;
+  font-size: 1rem;
+}
+
+.form-login__button {
+  background-color: var(--a5-color);
+  color: var(--a6-color);
+  align-self: flex-end;
+  padding: .25rem 1.5rem;
+  margin-top: .25rem;
+  font-weight: bold;
+  border-radius: .25rem;
+  border-width: 0;
+  cursor: pointer;
+}
