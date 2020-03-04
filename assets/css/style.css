@@ -1,6 +1,10 @@
 :root {
-  --white-color: #FDFDFD;
-  --black-color: #2A2A2A;
+  --a1-color: #182e38;
+  --a2-color: #7dc1b6;
+  --a3-color: #ff1e5a;
+  --a4-color: #eff9f3;
+  --a5-color: #f3ffbd;
+  --a6-color: #164e66;
 }
 
 * {
