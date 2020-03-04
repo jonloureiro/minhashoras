@@ -4,12 +4,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--black-color);
+  background-color: var(--a6-color);
 }
 
 .error-wrapper {
   text-align: center;
-  color: var(--white-color);
+  color: var(--a4-color);
 }
 
 .error-wrapper__code {
