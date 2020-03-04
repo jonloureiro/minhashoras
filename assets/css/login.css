@@ -25,7 +25,7 @@ main {
   color: var(--a6-color);
   align-self: flex-start;
   font-weight: bold;
-  width: 4rem;
+  width: 5rem;
   border-radius: .25rem .25rem;
   padding-top: .125rem;
   margin-bottom: -.25rem;
@@ -52,4 +52,10 @@ main {
   border-radius: .25rem;
   border-width: 0;
   cursor: pointer;
+}
+
+.form-login__button:disabled,
+.form-login__button[disabled] {
+  background-color: var(--a4-color);
+  cursor: not-allowed;
 }

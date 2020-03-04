@@ -12,7 +12,7 @@
 <?php endforeach ?>
   <title><?= $this->e($title) ?></title>
 </head>
-<body>
+<body id="body">
 
 <?= $this->section('content') ?>
 

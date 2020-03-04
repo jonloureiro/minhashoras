@@ -22,6 +22,10 @@ body {
   flex-direction: column;
 }
 
+body.wait {
+  cursor: wait;
+}
+
 main {
   flex: 1;
   display: flex;
