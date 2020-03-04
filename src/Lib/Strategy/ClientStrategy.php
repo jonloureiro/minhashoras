@@ -33,12 +33,9 @@ class ClientStrategy extends ApplicationStrategy
         ServerRequestInterface $request
     ): ResponseInterface {
         $controller = $route->getCallable($this->getContainer());
-        $response = $controller(
-            $this->templates,
-            $this->responseFactory,
-            $request,
-            $route->getVars()
-        );
+        ['templateName' => $name, 'templateData' => $data ] = $controller($request, $route->getVars());
+        $response = $this->responseFactory->createResponse();
+        $response->getBody()->write($this->templates->render($name, $data));
         $response = $this->applyDefaultResponseHeaders($response);
         return $response;
     }

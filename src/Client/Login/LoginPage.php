@@ -11,15 +11,13 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class LoginPage
 {
-    public function __invoke(
-        Engine $templates,
-        ResponseFactoryInterface $responseFactory,
-        ServerRequestInterface $request
-    ) : ResponseInterface {
-        $response = $responseFactory->createResponse();
-        $response->getBody()->write(
-            $templates->render('Login', ['name' => 'Jonathan'])
-        );
-        return $response;
+    public function __invoke(): array
+    {
+        return [
+            'templateName' => 'Login',
+            'templateData' => [
+                'name' => 'Jonathan',
+            ],
+        ];
     }
 }
