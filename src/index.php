@@ -1,6 +1,7 @@
 <?php
 
 use App\Api\Hello\HelloController;
+use App\Client\Home\HomePage;
 use App\Client\Login\LoginPage;
 use App\Client\Register\RegisterPage;
 use App\Lib\Strategy\ApiStrategy;
@@ -36,7 +37,9 @@ if ($isApi) {
 } else {
     $templates = new Engine(dirname(__DIR__) . '/templates');
     $strategy = new ClientStrategy($responseFactory, $templates);
+
     $routes = $router->group('/', function (RouteGroup $route) {
+        $route->map('GET', '/', HomePage::class);
         $route->map('GET', '/login', LoginPage::class);
         $route->map('GET', '/register', RegisterPage::class);
     });
