@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="<?= $this->e($assets) . $stylesheet ?>">
 <?php endforeach ?>
   <title><?= $this->e($title) ?></title>
+  <script src="<?= $this->e($assets) ?>js/turbolinks.min.js"></script>
 </head>
 <body id="body">
 

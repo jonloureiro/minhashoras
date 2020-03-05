@@ -25,7 +25,7 @@
       placeholder="Como posso te chamar? 🤔" required
     >
     <div class="form-login__footer">
-      <a class="form-login__register" href="/login">Já tem conta?</a>
+      <a data-turbolinks-action="replace" class="form-login__register" href="/login">Já tem conta?</a>
       <button class="form-login__button">Entrar</button>
     </div>
   </form>
