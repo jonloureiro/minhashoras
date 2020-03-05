@@ -2,6 +2,7 @@
 
 use App\Api\Hello\HelloController;
 use App\Client\Login\LoginPage;
+use App\Client\Register\RegisterPage;
 use App\Lib\Strategy\ApiStrategy;
 use App\Lib\Strategy\ClientStrategy;
 use Laminas\Diactoros\ResponseFactory;
@@ -37,6 +38,7 @@ if ($isApi) {
     $strategy = new ClientStrategy($responseFactory, $templates);
     $routes = $router->group('/', function (RouteGroup $route) {
         $route->map('GET', '/login', LoginPage::class);
+        $route->map('GET', '/register', RegisterPage::class);
     });
     $routes->setStrategy($strategy);
 }
