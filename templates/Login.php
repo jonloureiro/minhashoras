@@ -6,7 +6,7 @@
 ]); ?>
 <main>
   <form class="form-login" id="form-login">
-    <h1 class="form-login__title">Minhas Horas</h1>
+    <h1 class="form-login__title">Fazer Login</h1>
     <label class="form-login__label" for="email">Email</label>
     <input class="form-login__input" type="email" name="email" id="email"
       placeholder="Seu email aqui 📬" required
@@ -15,7 +15,10 @@
     <input class="form-login__input" palceholder="E sua senha" type="password"
       placeholder="Aqui sua senha 🙈" name="password" id="password" required
     >
-    <button class="form-login__button">Entrar</button>
+    <div class="form-login__footer">
+      <a class="form-login__register" href="/register">Cadastrar-se?</a>
+      <button class="form-login__button">Entrar</button>
+    </div>
   </form>
 </main>
 <script src="<?= $this->e($assets) ?>js/login.js"></script>
