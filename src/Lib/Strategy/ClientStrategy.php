@@ -63,13 +63,18 @@ class ClientStrategy extends ApplicationStrategy
                 ServerRequestInterface $request,
                 RequestHandlerInterface $requestHandler
             ): ResponseInterface {
+                $assets = getenv('ASSETS');
+                if (!$assets) {
+                    $assets = '/';
+                }
                 $response = $this->response;
                 if ($response->getBody()->isWritable()) {
                     $response->getBody()->write(
                         $this->templates->render('Error', [
                             "code" => $this->error->getStatusCode(),
                             "message" => $this->error->getMessage(),
-                            "text" => $this->error->getTraceAsString()
+                            "text" => $this->error->getTraceAsString(),
+                            "assets" => $assets
                         ])
                     );
                 }
@@ -101,13 +106,18 @@ class ClientStrategy extends ApplicationStrategy
                     if ($e->getCode()) {
                         $statusCode = $e->getCode();
                     }
+                    $assets = getenv('ASSETS');
+                    if (!$assets) {
+                        $assets = '/';
+                    }
                     $response = $this->response;
                     if ($response->getBody()->isWritable()) {
                         $response->getBody()->write(
                             $this->templates->render('Error', [
                               "code" => $statusCode,
                               "message" => $e->getMessage(),
-                              "text" => $e->getTraceAsString()
+                              "text" => $e->getTraceAsString(),
+                              "assets" => $assets
                            ])
                         );
                     }
