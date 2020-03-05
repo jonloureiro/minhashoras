@@ -1,6 +1,6 @@
 (function () {
   const body = document.getElementById('body');
-  const form = document.getElementById('form-login');
+  const form = document.getElementById('form-register');
 
   form.onsubmit = function(event) {
     event.preventDefault();
