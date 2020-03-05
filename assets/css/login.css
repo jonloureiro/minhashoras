@@ -18,6 +18,8 @@ main {
   margin: 0 -1rem .75rem;
   color: var(--a4-color);
   text-align: center;
+  text-shadow: var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 .form-login__label {
@@ -30,6 +32,7 @@ main {
   border-radius: .25rem .25rem;
   margin-bottom: -.25rem;
   text-align: center;
+  box-shadow: var(--shadow);
 }
 
 .form-login__input {
@@ -41,6 +44,7 @@ main {
   border-width: 0;
   outline-width: 0;
   font-size: 1rem;
+  box-shadow: var(--shadow);
 }
 
 .form-login__button {
@@ -52,6 +56,7 @@ main {
   border-radius: .25rem;
   border-width: 0;
   cursor: pointer;
+  box-shadow: var(--shadow);
 }
 
 .form-login__button:disabled,
@@ -78,5 +83,5 @@ main {
   font-weight: 800;
   border-radius: 0 .25rem .25rem 0;
   outline: none;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  text-shadow: var(--shadow);
 }
