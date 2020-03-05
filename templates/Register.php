@@ -1,5 +1,6 @@
 <?php $this->layout('Base', [
-    'title' => 'Login | Minhas Horas',
+    'title' => 'Registrar | Minhas Horas',
+    'assets' => $assets,
     'stylesheets' => [
       'css/login.css',
     ]

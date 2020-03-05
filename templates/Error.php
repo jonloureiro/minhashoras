@@ -1,5 +1,6 @@
 <?php $this->layout('Base', [
     'title' => 'Erro | Minhas Horas',
+    'assets' => $assets,
     'stylesheets' => [
       'css/error.css'
     ]
