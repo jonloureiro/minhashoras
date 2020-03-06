@@ -7,3 +7,9 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 end_of_line = lf
+
+[*.{yml,conf,php,json}]
+indent_size = 4
+
+[templates/**/*.php]
+indent_size = 2

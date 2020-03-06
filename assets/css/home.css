@@ -1,0 +1,14 @@
+main {
+  background-color: var(--a4-color);
+  color: var(--a1-color);
+}
+
+.home-wrapper__links {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.home-wrapper__links,
+.home-wrapper__links > a {
+  color: var(--a1-color);
+}
