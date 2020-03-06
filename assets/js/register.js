@@ -1,4 +1,5 @@
 (function () {
+  'use strict';
   const body = document.getElementById('body');
   const form = document.getElementById('form-register');
 
@@ -33,6 +34,5 @@
       button.innerText = 'Entrar';
       body.classList = '';
     }, 2000);
-
   }
 })()
