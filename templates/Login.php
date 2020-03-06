@@ -3,7 +3,8 @@
     'assets' => $assets,
     'stylesheets' => [
       'css/login.css'
-    ]
+    ],
+    'no_cache' => true
 ]); ?>
 <main>
   <form class="form-login" id="form-login">

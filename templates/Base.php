@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php if ($this->e($no_cache)): ?>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<?php endif ?>
   <link rel="stylesheet" href="<?= $this->e($assets) ?>css/sanitize.css">
   <link rel="stylesheet" href="<?= $this->e($assets) ?>css/forms.css">
   <link rel="stylesheet" href="<?= $this->e($assets) ?>css/typography.css">
