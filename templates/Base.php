@@ -6,15 +6,13 @@
 <?php if ($this->e($no_cache)): ?>
   <meta name="turbolinks-cache-control" content="no-cache">
 <?php endif ?>
-  <link rel="stylesheet" href="<?= $this->e($assets) ?>css/sanitize.css">
-  <link rel="stylesheet" href="<?= $this->e($assets) ?>css/forms.css">
-  <link rel="stylesheet" href="<?= $this->e($assets) ?>css/typography.css">
+  <script src="<?= $this->e($assets) ?>dist/turbolinks.min.js" defer></script>
+  <link rel="stylesheet" href="<?= $this->e($assets) ?>dist/sanitize.min.css">
   <link rel="stylesheet" href="<?= $this->e($assets) ?>css/style.css">
 <?php foreach ($stylesheets as $stylesheet): ?>
   <link rel="stylesheet" href="<?= $this->e($assets) . $stylesheet ?>">
 <?php endforeach ?>
   <title><?= $this->e($title) ?></title>
-  <script src="<?= $this->e($assets) ?>js/turbolinks.min.js"></script>
 </head>
 <body id="body">
 
