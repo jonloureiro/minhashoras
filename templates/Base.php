@@ -6,8 +6,8 @@
 <?php if ($this->e($no_cache)): ?>
   <meta name="turbolinks-cache-control" content="no-cache">
 <?php endif ?>
-  <script src="<?= $this->e($assets) ?>dist/turbolinks.min.js" defer></script>
-  <link rel="stylesheet" href="<?= $this->e($assets) ?>dist/sanitize.min.css">
+  <script src="<?= $this->e($assets) ?>js/turbolinks.js" defer></script>
+  <link rel="stylesheet" href="<?= $this->e($assets) ?>css/sanitize.css">
   <link rel="stylesheet" href="<?= $this->e($assets) ?>css/style.css">
 <?php foreach ($stylesheets as $stylesheet): ?>
   <link rel="stylesheet" href="<?= $this->e($assets) . $stylesheet ?>">

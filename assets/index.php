@@ -18,7 +18,7 @@ $cssfiles = array_diff(scandir($csspath), $ignore);
 foreach ($jsfiles as $file) {
     if ($pos = strrpos($file, '.js')) {
         $name = substr($file, 0, $pos);
-        $newFile = "$path/dist/js/$name.min.js";
+        $newFile = "$path/dist/js/$name.js";
         echo "Minify js: $newFile\n";
         (new Minify\JS("$jspath/$file"))->minify($newFile);
     }
@@ -27,7 +27,7 @@ foreach ($jsfiles as $file) {
 foreach ($cssfiles as $file) {
     if ($pos = strrpos($file, '.css')) {
         $name = substr($file, 0, $pos);
-        $newFile = "$path/dist/css/$name.min.css";
+        $newFile = "$path/dist/css/$name.css";
         echo "Minify css: $newFile\n";
         (new Minify\CSS("$csspath/$file"))->minify($newFile);
     }
