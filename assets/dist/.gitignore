@@ -1,5 +1,2 @@
 *.js
 *.css
-
-!sanitize.min.css
-!turbolinks.min.js
