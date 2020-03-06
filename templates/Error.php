@@ -12,7 +12,7 @@
   </div>
   <script>
     console.error(`Status Code: <?= $this->e($code) . ". Message: " . $this->e($message) ?>`);
-<?php if (getenv('DEVELOPMENT')): ?>
+<?php if (!getenv('PRODUCTION')): ?>
     console.error(`<?= $this->e($text) ?>`);
 <?php endif; ?>
   </script>
