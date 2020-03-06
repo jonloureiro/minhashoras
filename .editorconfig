@@ -13,3 +13,6 @@ indent_size = 4
 
 [templates/**/*.php]
 indent_size = 2
+
+[assets/dist/**]
+insert_final_newline = false
