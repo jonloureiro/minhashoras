@@ -12,7 +12,7 @@ services:
             - php-fpm
 
     php-fpm:
-        image: php:7-fpm-alpine
+        build: .
         volumes:
             - ./:/var/www/minhashoras
         environment:
@@ -23,6 +23,8 @@ services:
 
     postgres:
         image: postgres:alpine
+        ports:
+            - "5432:5432"
         environment:
             POSTGRES_USER: ${POSTGRES_USER}
             POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
