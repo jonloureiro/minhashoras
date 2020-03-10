@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Api\Users;
 
+use Exception;
+
 class User
 {
     protected ?string $username;
@@ -12,6 +14,14 @@ class User
 
     public function __construct(string $email, string $password, ?string $username = null)
     {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("E-mail inválido", 400);
+        }
+
+        if ($password === '') {
+            throw new Exception("Senha inválida", 400);
+        }
+
         $this->username = $username;
         $this->email = $email;
         $this->password = password_hash($password, PASSWORD_BCRYPT);
